@@ -147,7 +147,7 @@ void loop()
       while(Serial1.read() >= 0)
         Serial1.flush(); 
       
-      //Wait for new data to fill the buffer //
+      // Wait for new data to fill the buffer //
       HAL_Delay(WAIT_BUFF[Mode]);
 
       // read data from buffer in "buff" //
@@ -176,7 +176,7 @@ void loop()
         // Test if IDLE Time de send the frame //
         if (!(time.toInt()<=START_HOUR && time.toInt()>=END_HOUR))
         {
-          //post = true;
+          post = true;
           Serial.println("Sending data to D.B...");
         }
         else
